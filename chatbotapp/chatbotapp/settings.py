@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'chat.apps.ChatConfig',
     'chatapp.apps.ChatappConfig',
     'django.contrib.admin',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Channels
 ASGI_APPLICATION = 'chatbotapp.routing.application'
+
