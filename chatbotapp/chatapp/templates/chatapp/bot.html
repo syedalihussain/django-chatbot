@@ -26,16 +26,21 @@
             </h5>
         </div>
     </div>
+    <!--<div class="row justify-content-center mt-2">-->
+        <!--<textarea id="chat-log" cols="40" rows="20"></textarea><br/>-->
+    <!--</div>-->
     <div class="row justify-content-center mt-2">
-        <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
+        <div id="unique" style="margin-bottom:20px;color:#a6a6a6" class="col-md-12">
+            <h5 style="float:right"> {{question.text}}</h5><br />
+        </div>
     </div>
     <span style="display:none" id="csrf"> {{ csrf_token }}</span>
     <div class="row justify-content-center mt-2">
         <form id="form1" style="box-shadow: 0px 0px 7px #8c8c8c;" class="col-12 col-md-6 mt-5 mb-5">
             <div class="row justify-content-center">
-                <div class="col-auto">
-                    <h5 id="question" style="margin-bottom:20px;color:#a6a6a6" class=""> {{question.text}}</h5>
-                </div>
+                <!--<div class="col-auto">-->
+                    <!--<h5 id="question" style="margin-bottom:20px;color:#a6a6a6" class=""> {{question.text}}</h5>-->
+                <!--</div>-->
             </div>
             <div class="row justify-content-center">
                 <div class="col-10">
@@ -83,7 +88,9 @@ function myFunction() {
                 window.location = yo
             }
             var data = jQuery.parseJSON(data);
-            $('#question').html(data.next_question_text)
+            <!--$('#question').html(data.next_question_text)-->
+            $('#unique').append("<h5 style=\"float:left\">" + $('#answer').val() + "</h5>" + "<br />");
+            $('#unique').append("<h5 style=\"float:right\">" + data.next_question_text + "</h5>" + "<br />");
             $('#answer').val('')
             $('#answer').attr('question', data.next_question_id)
             $('#answer').attr('user', data.user)
