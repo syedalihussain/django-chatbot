@@ -4,6 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    render(request, 'chat/index.html', {})
-
-    
+    return render(request, 'chat/index.html', {})
