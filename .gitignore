@@ -1,1 +1,5 @@
-chatbotapp/.idea/*
+# Ignore the IDEA files
+.idea/
+# Ignore the python cache files
+__pycache__/
+
