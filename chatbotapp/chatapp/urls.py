@@ -6,5 +6,5 @@ app_name = 'chatapp'
 
 urlpatterns = [
     path('bot/', views.bot, name='bot'),
-    path('result', views.result, name='result'),
+    path('result/', views.result, name='result'),
 ]

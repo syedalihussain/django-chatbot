@@ -33,6 +33,11 @@ def bot(request):
                 args['end'] = 'end'
             args['user'] = request.POST.get('user')
         return HttpResponse(json.dumps(args), content_type='application/javascript; charset=utf8')
+    else:
+        question = Question.objects.first()
+        args['question'] = question
+        args['next'] = int(question.id) + 1
+        return render(request, 'chatapp/bot.html', args)
 
 
 def result(request):
