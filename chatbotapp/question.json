@@ -1,0 +1,1 @@
+[{"model": "chatapp.question", "pk": 1, "fields": {"text": "What is your name?"}}, {"model": "chatapp.question", "pk": 2, "fields": {"text": "Are you male or female?"}}, {"model": "chatapp.question", "pk": 3, "fields": {"text": "When were you born?"}}, {"model": "chatapp.question", "pk": 4, "fields": {"text": "Are you a smoker?"}}]
